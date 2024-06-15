@@ -7,10 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "primary-blue": "#0c0d21",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      boxShadow: {
+        buttonShadow: "4px 4px 4px 2px rgb(47,50,126)",
       },
     },
   },
