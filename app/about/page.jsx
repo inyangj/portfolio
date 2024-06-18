@@ -1,16 +1,100 @@
-import React from 'react'
+import Head from "next/head";
+import React from "react";
+import { Button } from "../components/elements";
 
-const about = () => {
+const About = () => {
+  const technicalSkills = [
+    "Typescript",
+    "Next.js",
+    "React.js",
+    "Responsive Web Design",
+    "JavaScript",
+    "CSS3",
+    "HTML5",
+    "Redux & RTK",
+    "Tailwind CSS",
+    "Material UI",
+    "Git & GitHub",
+  ];
+
   return (
-    <div>
-      <h1>about</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, mollitia odit? Fuga autem deleniti ducimus libero beatae saepe totam dignissimos expedita, alias, earum, sint labore. Itaque perspiciatis ipsum tempora aperiam?
-      Magnam, harum molestias explicabo sunt a officiis quisquam in aut quasi quaerat accusantium impedit eaque modi, nesciunt omnis voluptate fuga? Aliquid vel rerum sed fuga repudiandae tempora odio facilis reprehenderit.
-      Aut mollitia magnam veritatis dolor minima! Maxime numquam facere nemo molestiae sapiente eaque amet assumenda, similique vel voluptas a, hic natus inventore eos fuga autem nihil reiciendis officia nobis eum!
-      Odio, laudantium sit expedita quis quia, mollitia quos harum accusamus suscipit quasi sunt, reiciendis quisquam. Iste culpa error voluptatibus impedit explicabo, nihil quasi eos maxime possimus temporibus commodi voluptatem deleniti.
-      Quia minima ratione officia! Quam cupiditate, fuga dolores iste natus deleniti nihil ab consequatur, esse suscipit, placeat labore eum quas totam a fugiat eius. Officiis cupiditate expedita sunt minus recusandae.</p>
-    </div>
-  )
-}
+    <>
+      <Head>
+        <title>About Me - Inyang Inyang</title>
+        <meta
+          name="description"
+          content="Learn more about Inyang Inyang, a passionate frontend developer with over 3 years of experience."
+        />
+      </Head>
+      <div className="min-h-screen p-5 md:p-12">
+        <main className="flex flex-col items-center w-full max-w-5xl mx-auto">
+          <h1 className="text-5xl font-bold text-center mb-8">
+            GET TO KNOW <span className="text-green-500">ME</span>
+          </h1>
+          <section className="text-lg space-y-4 text-center">
+            <p>
+              Hello! I'm Inyang Inyang, a passionate and dedicated frontend
+              developer with over 3 years of experience in creating engaging and
+              user-friendly web applications. My journey in tech has been driven
+              by curiosity, continuous learning, and a desire to solve
+              real-world problems through innovative solutions.
+            </p>
+            <p>
+              My tech journey began during my undergraduate studies in Geology
+              at the University of Calabar, Nigeria. I was fascinated by
+              software development and started teaching myself programming,
+              beginning with basic HTML and CSS, and soon moved on to
+              JavaScript.
+            </p>
+            <p>
+              After completing my degree and the compulsory National Service, I
+              immersed myself in the tech industry through the guidance of
+              Renaissance Innovation Labs, focusing on modern JavaScript
+              frameworks and libraries, particularly React.js.
+            </p>
+          </section>
+          <section className="mt-8 w-full">
+            <h3 className="text-2xl font-bold text-center mb-4">
+              Technical Skills
+            </h3>
+            <div className="flex flex-wrap justify-center space-x-2">
+              {technicalSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="bg-gray-700 text-white p-2 rounded m-2"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </section>
+        </main>
+        <aside className="w-full max-w-5xl mt-8 mx-auto">
+          <h3 className="text-2xl font-bold">Frontend Developer</h3>
+          <p>Renaissance Innovation Labs</p>
+          <p>Oct 2022 - Current (Full Time)</p>
+          <ul className="list-disc ml-4 mt-2 space-y-2">
+            <li>Participate in design reviews and code reviews.</li>
+            <li>
+              Worked in the capacity of a frontend developer, building and
+              maintaining web applications.
+            </li>
+            <li>
+              Significant increase in user activity and engagement through
+              optimized frontend solutions.
+            </li>
+            <li>
+              Researched and designed the landing page and other key components
+              for various projects.
+            </li>
+          </ul>
+        </aside>
+        <footer className="mt-8 flex justify-center">
+          <Button className="p-3 rounded text-lg">Download Resume</Button>
+        </footer>
+      </div>
+    </>
+  );
+};
 
-export default about;
+export default About;

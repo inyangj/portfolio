@@ -26,6 +26,9 @@
     rgb(var(--background-start-rgb));
 }  */
 
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -60,4 +63,17 @@
 
 .animate-left {
   animation: slideLeft 3s ease forwards;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(2.5deg); }
+}
+
+.emoji-wave {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
 }

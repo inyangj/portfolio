@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        oswald: ["Oswald", "sans-serif"],
+        inconsolata: ["Inconsolata", "monospace"],
+      },
       colors: {
         "primary-blue": "#0c0d21",
       },
@@ -17,6 +21,17 @@ module.exports = {
       },
       boxShadow: {
         buttonShadow: "4px 4px 4px 2px rgb(47,50,126)",
+      },
+      keyframes: {
+        wave: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(20deg)" },
+          "50%": { transform: "rotate(-20deg)" },
+          "75%": { transform: "rotate(10deg)" },
+        },
+      },
+      animation: {
+        wave: "wave 1s ease-in-out infinite",
       },
     },
   },
