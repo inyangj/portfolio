@@ -56,6 +56,7 @@ const ProjectCard = ({
         {type !== "Paid" && (
           <a
             href={codeLink}
+            target="_blank"
             className="mt-2 inline-block text-white px-4 py-2 rounded"
           >
             View Code
@@ -63,6 +64,7 @@ const ProjectCard = ({
         )}
         <a
           href={siteLink}
+          target="_blank"
           className="bg-blue-600 rounded-tl-full w-1/2 text-white px-4 py-4 rounded"
         >
           {isWebApp ? "View App" : "View Site"}

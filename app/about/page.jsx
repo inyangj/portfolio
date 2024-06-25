@@ -13,7 +13,6 @@ const About = () => {
     "HTML5",
     "Redux & RTK",
     "Tailwind CSS",
-    "Material UI",
     "Git & GitHub",
   ];
 
@@ -26,10 +25,10 @@ const About = () => {
           content="Learn more about Inyang Inyang, a passionate frontend developer with over 3 years of experience."
         />
       </Head>
-      <div className="min-h-screen p-5 md:p-12">
+      <div className=" p-5 md:px-12">
         <main className="flex flex-col items-center w-full max-w-5xl mx-auto">
           <h1 className="text-5xl font-bold text-center mb-8">
-            GET TO KNOW <span className="text-green-500">ME</span>
+            GET TO KNOW <span className="">ME</span>
           </h1>
           <section className="text-lg space-y-4 text-center">
             <p>
@@ -72,7 +71,7 @@ const About = () => {
         <aside className="w-full max-w-5xl mt-8 mx-auto">
           <h3 className="text-2xl font-bold">Frontend Developer</h3>
           <p>Renaissance Innovation Labs</p>
-          <p>Oct 2022 - Current (Full Time)</p>
+          <p>Oct 2022 - Current </p>
           <ul className="list-disc ml-4 mt-2 space-y-2">
             <li>Participate in design reviews and code reviews.</li>
             <li>

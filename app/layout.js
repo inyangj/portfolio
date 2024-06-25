@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <header className="px-4 lg:px-24 py-2 ">
           <Nav />
         </header>
-        <main className=" mt-8 xl:mt-[80px] xl:mx-[160px]">{children}</main>
+        <main className=" mt-8  xl:mx-[160px]">{children}</main>
       </body>
     </html>
   );
