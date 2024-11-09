@@ -120,7 +120,9 @@ export default function Home() {
             responsive websites.
           </p>
           <div className="flex gap-4 mt-6">
-            <Button className={`w-full`}>Get in touch</Button>
+            <Link href="/contact">
+              <Button className={`w-full`}>Get in touch</Button>
+            </Link>
           </div>
         </div>
       </article>
