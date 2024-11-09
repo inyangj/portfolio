@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 import React from "react";
 import { Button } from "../components/elements";
@@ -15,6 +16,13 @@ const About = () => {
     "Tailwind CSS",
     "Git & GitHub",
   ];
+
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/Resume.pdf"; 
+    link.download = "Inyang_Resume.pdf"; 
+    link.click();
+  };
 
   return (
     <>
@@ -89,7 +97,9 @@ const About = () => {
           </ul>
         </aside>
         <footer className="mt-8 flex justify-center">
-          <Button className="p-3 rounded text-lg">Download Resume</Button>
+          <Button className="p-3 rounded text-lg" onClick={downloadResume}>
+            Download Resume
+          </Button>
         </footer>
       </div>
     </>

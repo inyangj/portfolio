@@ -5,6 +5,26 @@ import ProjectCard from "./component/ProjectCard";
 
 const projects = [
   {
+    title: "funMight Beauty Shop",
+    description: "A beauty shop web application",
+    status: "In Progress",
+    technologies: ["Next.js", "JavaScript", "Tailwind CSS", "Ant Design"],
+    codeLink: "https://github.com/inyangj/FunMigh-Beauty-Shop",
+    siteLink: "https://funmight-beauty-shop.vercel.app/",
+    type: "Paid",
+    isWebApp: true,
+  },
+  {
+    title: "Larger Than I",
+    description: "NGO website",
+    status: "Completed",
+    technologies: ["Next.js", "JavaScript", "Tailwind CSS", "Ant Design"],
+    codeLink: "https://github.com/Cedar1000/larger-than-i-website",
+    siteLink: "https://www.largerthani.org/",
+    type: "Paid",
+    isWebApp: false,
+  },
+  {
     title: "RIL Booking Widget Landing Page",
     description: "A landing page for the RIL Booking Widget.",
     status: "Completed",

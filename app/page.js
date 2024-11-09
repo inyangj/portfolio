@@ -5,6 +5,7 @@ import Image from "next/image";
 import { profile } from "@/public/assets/images";
 import { github, linkedin, twitter } from "@/public/assets/icons";
 import Button from "./components/elements/Button";
+import Link from "next/link";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +30,10 @@ export default function Home() {
     };
   }, []);
 
+  const handleRedirect = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <main className="px-5 md:px-12 xl:px-0 font-inconsolata grid place-content-center lg:place-content-stretch h-[800px] sm:h-full sm:pb-6 lg:pb-0">
       <article className="flex flex-col lg:flex-row lg:justify-between lg:gap-5 xl:gap-0  ">
@@ -50,7 +55,9 @@ export default function Home() {
               responsive websites.
             </p>
             <div className="flex gap-4 mt-6">
-              <Button className={`w-full`}>Get in touch</Button>
+              <Link href="/contact">
+                <Button className={`w-full`}>Get in touch</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -59,7 +66,10 @@ export default function Home() {
             <Image src={profile} alt="hero" className="rounded-full" />
           </div>
           <div className="grid gap-4 text-2xl">
-            <div className="absolute top-4 right-20 sm:right-52 lg:right-14 xl:right-20 flex gap-2 items-center">
+            <div
+              className="absolute top-4 right-20 sm:right-52 lg:right-14 xl:right-20 flex gap-2 items-center cursor-pointer"
+              onClick={() => handleRedirect("https://github.com/inyangj")}
+            >
               <Image
                 src={github}
                 alt="hero"
@@ -69,13 +79,23 @@ export default function Home() {
                 Github
               </p>
             </div>
-            <div className="flex gap-2 items-center ml-3 sm:ml-5">
+            <div
+              className="flex gap-2 items-center ml-3 sm:ml-5 cursor-pointer"
+              onClick={() =>
+                handleRedirect("https://www.linkedin.com/in/inyangjohnson/")
+              }
+            >
               <Image src={linkedin} alt="hero" className="rounded-full" />
               <p className="hidden sm:block lg:hidden xl:block capitalize">
                 linkedin
               </p>
             </div>
-            <div className="absolute bottom-2 sm:bottom-4 right-20 sm:right-44 lg:right-14 flex gap-2 items-center">
+            <div
+              className="absolute bottom-2 sm:bottom-4 right-20 sm:right-44 lg:right-14 flex gap-2 items-center cursor-pointer"
+              onClick={() =>
+                handleRedirect("https://twitter.com/inyangjohnson01")
+              }
+            >
               <Image src={twitter} alt="hero" className="rounded-full" />
               <p className="hidden sm:block lg:hidden xl:block capitalize">
                 twitterX

@@ -81,23 +81,39 @@ ${email}.
             <p>- inyangjohnson01@gmail.com</p>
             <p>- (+234) 816 265 9076</p>
             <div className="flex space-x-4 mt-4">
-              <Image
-                src={github}
-                alt="hero"
-                className="w-6 h-6 rounded-full flex gap-2 items-center"
-              />
-
-              <Image
-                src={linkedin}
-                alt="hero"
-                className="w-6 h-6 rounded-full"
-              />
-
-              <Image
-                src={twitter}
-                alt="hero"
-                className="w-6 h-6 rounded-full"
-              />
+              <a
+                href="https://github.com/inyangj"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={github}
+                  alt="GitHub"
+                  className="w-6 h-6 rounded-full cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/inyangjohnson/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={linkedin}
+                  alt="LinkedIn"
+                  className="w-6 h-6 rounded-full cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://twitter.com/inyangjohnson01"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={twitter}
+                  alt="Twitter"
+                  className="w-6 h-6 rounded-full cursor-pointer"
+                />
+              </a>
             </div>
           </div>
         </div>

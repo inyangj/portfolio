@@ -13,6 +13,13 @@ const Nav = () => {
     setShowSideNav((prev) => !prev);
   };
 
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/Resume.pdf"; 
+    link.download = "Inyang_Resume.pdf"; 
+    link.click();
+  };
+
   return (
     <nav className="md:text-xl">
       <div className="flex justify-between items-center p-4">
@@ -39,7 +46,9 @@ const Nav = () => {
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
-        <Button className="hidden lg:block">Download Resume</Button>
+        <Button className="hidden lg:block" onClick={downloadResume}>
+          Download Resume
+        </Button>
         <button
           className="lg:hidden z-20"
           onClick={toggleSideNav}
@@ -83,7 +92,9 @@ const Nav = () => {
                 </Link>
               </li>
             </ul>
-            <Button className="mt-8">Download Resume</Button>
+            <Button className="mt-8" onClick={downloadResume}>
+              Download Resume
+            </Button>
           </div>
         </div>
       )}
